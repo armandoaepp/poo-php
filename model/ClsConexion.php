@@ -52,48 +52,6 @@ Class ClsConexion
         $this->close_connection();
         array_pop($this->rows);
     }
-
-/*	private $Cnx;
-	private $pServer="";
-	private $pDataBase="";
-	private $pUser="";
-	private $pPassword="";
-
-	function __construct()
-	{
-		// $this->pServer="www.adrisconsulting.com";
-		// $this->pDataBase="adriscon_sistgob";
-		// $this->pUser="adriscon_user";
-		// $this->pPassword="+-*user+-*";
-		
-		$this->pServer="127.0.0.1";
-		$this->pDataBase="db_sa";		
-		$this->pUser="root";
-		$this->pPassword="";
-
-		$this->Cnx=new mysqli($this->pServer, $this->pUser, $this->pPassword, $this->pDataBase)or die("Error en la Conexion");
-		$this->Cnx->set_charset("utf8"); // para resolver los problemas de las tildes y ñ
-   	}
-
-
-	function Ejecutar_Consulta($StrMySql)
-	{
-		$rs=$this->Cnx->query($StrMySql);
-		if ($rs)
-			return $rs;
-		else
-			return false;
-	}
-
-	function Ejecutar_Instruccion($StrMySql)
-	{
-		$rpta=$this->Cnx->query($StrMySql);
-		return $rpta;
-	}
-
-	function __destruct()
-	{
-		$this->Cnx->close();
-	}*/
+ 
 }
 ?>

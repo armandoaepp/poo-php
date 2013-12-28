@@ -1,10 +1,10 @@
 <?php
 /*
-	Autor			:	Armando Enrique Pisfil Puemape 
-  	Fecha			:	11/08/2012
-  	Clase			:	ClsConexion
-	Institucion		:	Taxi del Norte
-	Estado			:	OK
+	Autor          :   Armando Enrique Pisfil Puemape 
+    Fecha           :   27/12/2014
+    Clase           :   ClsConexion
+    Estado          :   OK
+    twitter         :   @armandoaepp
 */
  Class ClsConexion 
 { 
@@ -13,23 +13,23 @@
 	private static $db_host = '127.0.0.1';
     private static $db_user = 'root';
     private static $db_pass = '';
-	protected $db_driver = 'mysql';
+	protected $db_driver = 'mysql'; 
     protected $db_name = 'db_sa';
     protected $query;
     protected $rows = array();
     private $conn;
-    
+    # variable para controlar transacciones 
     protected $hasActiveTransaction = false;
 	  
-    # Conectar a la base de datos
+    # Conectar a la base de datos utilizamos la libreria pdo 
     private function open_connection()
     {
     	$cadena=$this->db_driver.":host=".self::$db_host.";dbname=" .$this->db_name;  
 		$this->conn = new PDO($cadena,self::$db_user,self::$db_pass);
+        # para manejar errores y excepcciones especiales para el manejo de transacciones
 		$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          
-
-		// $this->conn->query("SET NAMES 'utf8'"); 
+        # codificacion utf-8 
+        $this->conn->query("SET NAMES 'utf8'"); 
     }
     # Desconectar la base de datos
     private function close_connection()
@@ -42,8 +42,8 @@
     {
         # hasActiveTransaction si es vdd entonces esta iniciada una transaccion 
         if( $this->hasActiveTransaction==false)
-        $this->open_connection();
-
+            $this->open_connection();
+        # prepare query 
         $stm = $this->conn->prepare($this->query);
         $stm->execute() ;
     }
@@ -78,32 +78,32 @@
          
         // $this->close_connection();
     }
-
-   public function beginTransaction()
-   {
+    # Iniciar un transaccion 
+    public function beginTransaction()
+    {
     # nos conectamos 
         $this->open_connection();               
     # iniciamos la transaccion 
         $this->conn->beginTransaction();
-    #activamos la varible controladora 
+    #activamos la varible controladora de transacciones 
         $this->hasActiveTransaction = true ; 
         
-   }
-
-   public function commit() 
-   {
+    }
+# si a tenido existo hacemos un commit para volcar los datos 
+    public function commit() 
+    {
         $this->conn->commit ();
         $this->hasActiveTransaction = false;
         $this->close_connection();
 
-   }
-
-   public function rollback()
-   {
+    }
+# si hay errores para dehacer el volcado de datos 
+    public function rollback()
+    {
         $this->conn->rollback ();
         $this->hasActiveTransaction = false;
         $this->close_connection();
-   }
+    }
 
 }
 
