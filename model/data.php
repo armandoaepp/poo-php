@@ -13,15 +13,15 @@ class Usuario extends ClsConexion
 	public function get()
     {
             $this->query = "
-							SELECT * 
-							FROM parametro 
+							SELECT *
+							FROM parametro
 							where nParClase=1001
-							
+
 							";
         $this->get_results_from_query();
             // var_dump($this->row);
         // if (count($this->rows) == 1):
-        $data = $this->rows ; 
+        $data = $this->rows ;
         // var_dump($data) ;
         // echo "data: ".count($data);
         for($i = 0 ; $i < count( $data["cuerpo"]) ; $i++ ){
@@ -31,10 +31,10 @@ class Usuario extends ClsConexion
                echo $valor ."<br>";
             endforeach;*/
         }
-           
-        
+
+
     }
-    
+
 
 
     public function set()
@@ -42,16 +42,16 @@ class Usuario extends ClsConexion
     		try
     		{
 
-      	 		// $this->beginTransaction()  ; 
-                $this->query = " INSERT  INTO parametro (nParCodigo,  nParClase,  cParJerarquia,cParNombre, cParDescripcion, nParTipo) 
+      	 		// $this->beginTransaction()  ;
+                $this->query = " INSERT  INTO parametro (nParCodigo,  nParClase,  cParJerarquia,cParNombre, cParDescripcion, nParTipo)
 											 VALUES(1  ,  2050 , '111110' ,  'armando', 'Pisfil',	1000)";
 				$this->execute_single_query();
 
-				$this->query = " INSERT  INTO parametro (nParCodigo,  nParClase,  cParJerarquia,cParNombre, cParDescripcion, nParTipo) 
+				$this->query = " INSERT  INTO parametro (nParCodigo,  nParClase,  cParJerarquia,cParNombre, cParDescripcion, nParTipo)
 											 VALUES(2  ,  2050 , '111110' ,  'armando2222', 'Pisf222il',	1000)";
 				$this->execute_single_query();
 
-				$this->query = " INSERT  INTO parametro (nParCodigo,  nParClase,  cParJerarquia,cParNombre, cParDescripcion, nParTipo) 
+				$this->query = " INSERT  INTO parametro (nParCodigo,  nParClase,  cParJerarquia,cParNombre, cParDescripcion, nParTipo)
 											 VALUES(3  ,  2050 , '111110' ,  'armando2222', 'Pisf222il',	1000)";
 				$this->execute_single_query();
 
@@ -60,14 +60,14 @@ class Usuario extends ClsConexion
 
 				 // echo "transaccion : ";
             	// $this->commit() ;
-    		}catch(Exception $e) 
+    		}catch(Exception $e)
     		{
             	// $this->rollback() ;
             	// echo "rollback ";
 
     		}
 
-        
+
     }
     public function edit($user_data = array())
     {
@@ -102,6 +102,6 @@ class Usuario extends ClsConexion
 $usuario1 = new Usuario();
 
 // $usuario1->get();
-$usuario1->set() ; 
+$usuario1->set() ;
 // print $usuario1->nParClase . ' ' . $usuario1->nParCodigo . ' existe<br>';
 ?>{}

@@ -1,13 +1,15 @@
 <?php
 
-// require_once "../../capa_negocio/Funciones_Ajax/Fnc_Global.php";
+require_once "../controller/Funciones_Ajax/Fnc_Global.php";
 
 
-
+# =====================	Beans Php
+include_once "../beans/Bean_General.php" ;
+include_once "../beans/Bean_Parametro.php" ;
 
 # =====================	Clases Php
 require_once "ClsConexion.php";
-require_once "ClsParametro.php";
+require_once "ClsParametro_Dat.php";
 
 
 
