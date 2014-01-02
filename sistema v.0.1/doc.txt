@@ -1,0 +1,5 @@
+administracion del sistema
+1. menus 
+2. submenus n niveles 
+3. botonera 
+4. usuario

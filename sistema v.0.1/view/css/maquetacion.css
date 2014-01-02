@@ -1,0 +1,179 @@
+
+@font-face{
+	font-family: 'myriadpro';
+	src: url('../fuentes/MyriadPro-Bold.eot');
+	src:local('☺'), url('../fuentes/MyriadPro-Bold.otf'), url('../fuentes/MyriadPro-Bold.ttf');
+	font-weight: bold;
+    font-style: bold;
+    font-variant: bold;
+}
+@font-face{
+	font-family: 'century gothic';
+	font-style: bold;
+    font-variant: bold;
+	font-weight: bold;
+	src: url('../fuentes/GOTHICB.eot');
+	src:local('☺'), url('../fuentes/gothicb.otf'), url('../fuentes/GOTHICB.TTF');
+  }
+@font-face {
+    font-family: 'Agency FB';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../../../fuentes/agencyr-webfont.eot');
+    src: url('../../../../fuentes/agencyr-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../../../fuentes/agencyr-webfont.woff') format('woff'),
+         url('../../../../fuentes/agencyr-webfont.ttf') format('truetype'),
+         url('../../../../fuentes/agencyr-webfont.svg#Agency FB') format('svg');
+
+}
+
+        /* SCROLLBAR CSS3 */
+        ::-webkit-scrollbar{
+          width: 10px;
+          background: #dbe8ec;
+        }
+        ::-webkit-scrollbar-button{
+          width:8px;
+          height: 5px;
+          background-repeat: #ccc
+        }
+
+        ::-webkit-scrollbar-track{
+          background:#3c454e;
+          border:thin solid #1a1f25;
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb{
+          background: -webkit-linear-gradient(top, #5aafb0, #4ca06d);
+          -webkit-box-shadow:   inset 0 1px 0 rgba(255,255,225,.5),
+                        inset 1px 0 0 rgba(255,255,255,.4),
+                        inset 0 1px 2px rgba(255,255,255,.3);
+          border:thin solid #232c34;
+          border-radius: 10px;
+          -webkit-border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover{
+            background: -webkit-linear-gradient(top, #4ca06d, #5aafb0);
+        }
+
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: rgba(77,161,112,.6);
+        }
+
+
+body{
+     background:url(../img/fondo.png) ;
+     background-repeat: repeat;
+}
+.border-container{
+	background: white;
+	border-left: 4px solid #abdc28;
+	border-radius: 20px;
+	border-right: 4px solid #abdc28;
+	bottom: 30px;
+	font-size: 19px;
+	max-height: 475px ;
+	min-height: 475px;
+	opacity: 0.7;
+	overflow: auto ;
+	position: relative;
+ 	top:2px;
+ 		-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+}
+.menu {
+	font-family: 'myriadpro';
+	font-size: 17px ;
+    height: 37px ;
+}
+.nav a {
+	text-decoration:none;
+}
+.nav li {
+	list-style:none;
+}
+.menu, .nav li a.primero {
+	background: #9dd53a; /* Old browsers */
+	background: -moz-linear-gradient(top, #9dd53a 0%, #80c217 0%, #80c217 5%, #a1d54f 50%, #80c217 86%, #7cbc0a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9dd53a), color-stop(0%,#80c217), color-stop(5%,#80c217), color-stop(50%,#a1d54f), color-stop(86%,#80c217), color-stop(100%,#7cbc0a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #9dd53a 0%,#80c217 0%,#80c217 5%,#a1d54f 50%,#80c217 86%,#7cbc0a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #9dd53a 0%,#80c217 0%,#80c217 5%,#a1d54f 50%,#80c217 86%,#7cbc0a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #9dd53a 0%,#80c217 0%,#80c217 5%,#a1d54f 50%,#80c217 86%,#7cbc0a 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #9dd53a 0%,#80c217 0%,#80c217 5%,#a1d54f 50%,#80c217 86%,#7cbc0a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=0 ); /* IE6-9 */
+}
+.nav > li {
+	float:left;
+	z-index: 1000;
+}
+
+.nav li a {
+	border-right: 1px dotted ;
+	color:#FFF;
+	display:block;
+	padding:10px 12px;
+}
+
+.nav li .flecha{
+	display: none;
+	float:right;
+	font-size: 9px;
+	padding-left: 4px ;
+	position: relative;
+	top: -10px;
+}
+
+.nav li a:not(:last-child) .flecha {
+	display: inline;
+}
+
+.nav li a:hover {
+	background:#619A0B;
+}
+
+.nav li {
+	position:relative;
+}
+
+.nav li ul {
+	background: #9dd53a;
+	display:none;
+	min-width:140px;
+	position:absolute;
+	max-width: 100% ;
+}
+
+.nav li:hover > ul {
+	display:block;
+}
+
+.nav li ul li ul {
+	float: right;
+	right:-145px;
+	position:absolute;
+	top:0;
+}
+
+.nav li ul li  {
+	width:100%
+}
+.botonera , .title-user{
+	list-style: none;
+}
+.botonera li , .title-user li{
+	display: inline;
+}
+.botonera li a {
+	text-decoration: none;
+}
+.name-user{
+	font-family: 'century gothic';
+	font-size: 12px ;
+	font-weight: bold ;
+}
+.title-menu{
+	font-size: 20px;
+	font-family: "myriadpro" ;
+}
