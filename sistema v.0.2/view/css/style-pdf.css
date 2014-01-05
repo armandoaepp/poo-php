@@ -1,0 +1,243 @@
+@font-face{
+	font-family: 'myriadpro';
+	src: url('../fuentes/MyriadPro-Bold.eot');
+	src:local('☺'), url('../fuentes/MyriadPro-Bold.otf'), url('../fuentes/MyriadPro-Bold.ttf');
+	font-weight: bold;
+    font-style: bold;
+    font-variant: bold;
+}
+@font-face{
+	font-family: 'myriadpro';
+	src: url('../fuentes/MyriadPro.eot');
+	src:local('☺'), url('../fuentes/MyriadPro-Regular.otf'), url('../fuentes/Myriadpro.ttf');
+	font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+}
+@font-face{
+	font-family: 'century gothic';
+	src: url('../fuentes/GOTHICB.eot');
+	src:local('☺'), url('../fuentes/gothicb.otf'), url('../fuentes/GOTHICB.TTF');
+	font-weight: bold;
+    font-style: bold;
+    font-variant: bold;
+}
+@font-face{
+	font-family: 'century gothic';
+	src: url('../fuentes/GOTHIC.eot');
+	src:local('☺'), url('../fuentes/gothic.otf'), url('../fuentes/GOTHIC.TTF');
+	font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+}
+@font-face {
+    font-family: 'Agency FB';
+    src: url('../fuentes/agencyr-webfont.eot');
+    src: url('../fuentes/agencyr-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fuentes/agencyr-webfont.woff') format('woff'),
+         url('../fuentes/agencyr-webfont.ttf') format('truetype'),
+         url('../fuentes/agencyr-webfont.svg#Agency FB') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.grid{margin:0 auto; max-width:1200px; width:100%;}
+.g1140{margin:0 auto; max-width:1140px; width:100%;}
+.g1024{margin:0 auto; max-width:1024px; width:100%;}
+.g960{margin:0 auto; max-width:960px; width:100%;}
+.row{width:100%; margin:0 auto;}
+.c1{width:8.33%;}
+.c2{width:16.66%;}
+.c3{width:25%;}
+.c4{width:33.33%;}
+.c5{width:41.66%;}
+.c6{width:50%;}
+.c7{width:58.33%;}
+.c8{width:66.66%;}
+.c9{width:75%;}
+.c10{width:83.33%;}
+.c11{width:91.66%;}
+.c12{width:100%; min-height:1px; float:left; position:relative;}
+.c1-5{width:20%;}/* This column can be used as a one fifth of the row */
+.c1-8{width:12.5%;}/* This column can be used as a one eigth of the row */
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c1-5,.c1-8 {min-height:1px; float:left; padding-left:5px; padding-right:5px; position:relative;}
+.c1.first,.c2.first,.c3.first,.c4.first,.c5.first,.c6.first,.c7.first,.c8.first,.c9.first,.c10.first,.c11.first,.c1-5.first,.c1-8.first {
+	padding-left: 0; position:relative;
+}
+.c1.last,.c2.last,.c3.last,.c4.last,.c5.last,.c6.last,.c7.last,.c8.last,.c9.last,.c10.last,.c11.last,.c1-5.last,.c1-8.last {
+	padding-right: 0; position:relative;
+}
+
+/* ---- Alignments ---- */
+.centered{float: none; margin: auto;}
+.left {float: left;}
+.right {float: right;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
+.text-justify {text-align: justify;}
+.space-top {margin-top: 20px;}
+.space-bot {margin-bottom: 20px;}
+.space-left {margin-left: 20px;}
+.space-right {margin-right: 20px;}
+.space-min-top {margin-top: 10px;}
+.space-min-bot {margin-bottom: 10px;}
+.space-min-left {margin-left: 10px;}
+.space-min-right {margin-right: 10px;}
+.space-small-top {margin-top: 5px;}
+.space-small-bot {margin-bottom: 5px;}
+.space-small-left {margin-left: 5px;}
+.space-small-right {margin-right: 5px;}
+.space-all {margin: 20px;}
+.space-min-all {margin: 10px;}
+.padding-top {padding-top: 20px;}
+.padding-bot {padding-bottom: 20px;}
+.padding-left {padding-left: 20px;}
+.padding-right {padding-right: 20px;}
+.padding-min-top {padding-top: 10px;}
+.padding-min-bot {padding-bottom: 10px;}
+.padding-min-left {padding-left: 10px;}
+.padding-min-right {padding-right: 10px;}
+
+.padding-small-top {padding-top: 5px;}
+.padding-small-bot {padding-bottom: 5px;}
+.padding-small-left {padding-left: 5px;}
+.padding-small-right {padding-right: 5px;}
+
+.padding-all {padding: 20px;}
+.padding-min-all {padding: 10px;}
+.centered{float: none; margin: auto;}
+.float-right{ float: right;}
+.float-left{ float: left;}
+.clear{ clear: both;}
+
+
+.table {
+	width: 100%;
+	/*font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;*/
+	        border-radius: 5px;
+	   -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	        box-shadow: 0 1px 2px #d1d1d1;
+	   -moz-box-shadow: 0 1px 2px #d1d1d1;
+	-webkit-box-shadow: 0 1px 2px #d1d1d1;
+
+}
+
+.table td,
+.table th,
+.table-th {
+	padding: 1px 5px ;
+	text-align: left;
+	text-transform: uppercase!important;
+}
+.table th ,
+.table-th {
+	background-color: #f0f0f0;
+	        box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+	   -moz-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+	border: none;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	font-size: 11px;
+	line-height: 22px;
+	font-family: 'Agency FB';
+
+}
+.table th.th{
+	background-color:transparent!important;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	font-size: 10px;
+	line-height: 20px;
+	text-align: center;
+	font-family: 'Agency FB';
+}
+
+
+.table td{
+	font-size:10px;
+	color: #000000;
+	font-family: 'Agency FB';
+}
+
+.table-zebra tbody tr:nth-child(even) {
+	background: #E2E2E2;
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+	box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+}
+
+.table tbody tr .text-left,
+.table tbody tr .text-left,
+.table tr .text-left,
+.table tr .text-left {
+  text-align: left!important;
+}
+.table tbody tr .text-center ,
+.table tbody tr .text-center ,
+.table tr .text-center ,
+.table tr .text-center   {
+  text-align: center!important;
+}
+.table tbody tr .text-right ,
+.table tbody tr .text-right ,
+.table tr .text-right ,
+.table tr .text-right   {
+  text-align: right!important;
+}
+
+.table tr th a {
+	color: #006600;
+	text-decoration: underline;
+	line-height: inherit;
+}
+
+.table-border ,.table-border td  ,.table-border tr td{
+   border: 0;
+   border: none;
+    border-spacing:0;
+    border-collapse:collapse;
+}
+.gradient {
+		border:0.1mm solid #220044;
+		background-color: #ccc;
+		background: linear-gradient(top, #F0F1F4, #ccc);
+	}
+.rounded {
+	border:0.1mm solid #220044;
+	background-color: #ccc;
+	background: linear-gradient(top, #F0F1F4, #ccc);
+	border-radius: 2mm;
+	background-clip: border-box;
+
+}
+.border-bottom,
+.table .border-bottom td ,
+.table .border-bottom th{
+	border-bottom: #000 0.01mm solid;
+}
+.border-top,
+.border-top td{
+	border-top:0.01mm solid #220044;
+}
+.mayusc
+{
+	text-transform: uppercase;
+}
+.title{
+	font-size: 13px;
+	font-family: 'Agency FB';
+	padding: 2px 1px ;
+}
+
+.table tr .sub-title{
+	font-size: 9px!important;
+	font-weight: bold;
+	padding: 2px 1px ;
+	font-family: 'Agency FB';
+	font-style:italic;
+}
+.bold
+tr.bold{
+	font-weight: bold!important;
+}
